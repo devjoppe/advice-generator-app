@@ -1,0 +1,22 @@
+@use 'config';
+
+.advice {
+    background: config.$color-neutral-dark-grayish-blue;
+    display: flex;
+    flex-direction: column;
+    max-width: 540px;
+    height: 330px;
+    box-shadow: 30px 50px 80px rgba(0, 0, 0, 0.100202);
+    border-radius: 15px;
+}
+
+.advice--quote {
+    span {
+        color: config.$color-primary-light-cyan;
+    }
+}
+
+.patterndivider {
+    display: flex;
+    justify-content: center;
+}

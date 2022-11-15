@@ -19,4 +19,13 @@ $color-neutral-dark-blue: hsl(218, 23%, 16%);
 body {
     font-size: 28px;
     font-family: 'Manrope', sans-serif;
+    background:$color-neutral-dark-blue;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

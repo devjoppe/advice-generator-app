@@ -24,7 +24,7 @@ function showData(data) {
     console.log(adviceRes);
 
     const adviceText = document.querySelector('span');
-    adviceText.textContent = adviceRes;
+    adviceText.textContent = `"${adviceRes}"`;
 
 }
 
