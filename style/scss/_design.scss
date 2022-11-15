@@ -49,6 +49,7 @@
 .button--container {
     display: flex;
     justify-content: center;
+    height: 64px;
 }
 
 .advice--button {
@@ -74,5 +75,14 @@
 @media only screen and (max-width: 480px) {
     .patterndivider {
         background-image: url("../../images/pattern-divider-mobile.svg");
+    }
+
+    .advice--button {
+        &:hover {
+            box-shadow: none;
+        }
+        &:active {
+            box-shadow: 0px 0px 40px #53FFAA;
+        }
     }
 }
