@@ -1,22 +1,78 @@
 @use 'config';
 
 .advice {
+    position: relative;
     background: config.$color-neutral-dark-grayish-blue;
     display: flex;
     flex-direction: column;
     max-width: 540px;
-    height: 330px;
+    min-height: 330px;
     box-shadow: 30px 50px 80px rgba(0, 0, 0, 0.100202);
     border-radius: 15px;
+    margin: 0 12px 0 12px;
 }
 
 .advice--quote {
-    span {
+    display: flex;
+    justify-content: center;
+    width: inherit;
+    margin: 24px 48px 40px 48px;
+    .quote {
+        text-align: center;
+        font-weight: 800;
         color: config.$color-primary-light-cyan;
+        line-height: 38px;
     }
 }
 
 .patterndivider {
     display: flex;
+    width: inherit;
+    height: 16px;
+    background-image: url("../../images/pattern-divider-desktop.svg");
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+
+.numbertext {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: config.$color-primary-neon-green;
+    font-weight: 800;
+    letter-spacing: 4px;
+    margin-top: 48px;
+    display: flex;
     justify-content: center;
+}
+
+.button--container {
+    display: flex;
+    justify-content: center;
+}
+
+.advice--button {
+    position: absolute;
+    bottom: -32px;
+    background: config.$color-primary-neon-green;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    &:hover {
+        cursor: pointer;
+        box-shadow: 0px 0px 40px #53FFAA;
+    }
+    img {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .patterndivider {
+        background-image: url("../../images/pattern-divider-mobile.svg");
+    }
 }

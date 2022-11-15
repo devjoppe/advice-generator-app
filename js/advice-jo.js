@@ -21,14 +21,18 @@ getapi(api_url);
 function showData(data) {
 
     let adviceRes = data.slip.advice;
+    let numberRes = data.slip.id;
     console.log(adviceRes);
 
-    const adviceText = document.querySelector('span');
+    const adviceText = document.querySelector('.quote');
     adviceText.textContent = `"${adviceRes}"`;
+
+    const numberText = document.querySelector('.numbertext');
+    numberText.textContent = `ADVICE #${numberRes}`;
 
 }
 
-const adviceBtn = document.querySelector('#newadvice');
+const adviceBtn = document.querySelector('.advice--button');
 
 adviceBtn.addEventListener('click', (e) => {
     e.preventDefault();
